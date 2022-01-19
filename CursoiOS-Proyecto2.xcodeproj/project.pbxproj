@@ -14,11 +14,11 @@
 		D786BD0327982793004619AD /* CursoiOS_Proyecto2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0227982793004619AD /* CursoiOS_Proyecto2Tests.swift */; };
 		D786BD0D27982793004619AD /* CursoiOS_Proyecto2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0C27982793004619AD /* CursoiOS_Proyecto2UITests.swift */; };
 		D786BD0F27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0E27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift */; };
-		D786BD1D2798286E004619AD /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */; };
 		D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */; };
 		D786BD2427982A72004619AD /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2327982A72004619AD /* Landmark.swift */; };
 		D786BD2627982AD6004619AD /* FetchLandmarksFromDiskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2527982AD6004619AD /* FetchLandmarksFromDiskTests.swift */; };
 		D786BD2927982B7E004619AD /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = D786BD2827982B7E004619AD /* landmarkData.json */; };
+		D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +50,11 @@
 		D786BD0827982793004619AD /* CursoiOS-Proyecto2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CursoiOS-Proyecto2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BD0C27982793004619AD /* CursoiOS_Proyecto2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOS_Proyecto2UITests.swift; sourceTree = "<group>"; };
 		D786BD0E27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOS_Proyecto2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = SOURCE_ROOT; };
 		D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLandmarksUseCase.swift; sourceTree = "<group>"; };
 		D786BD2327982A72004619AD /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		D786BD2527982AD6004619AD /* FetchLandmarksFromDiskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLandmarksFromDiskTests.swift; sourceTree = "<group>"; };
 		D786BD2827982B7E004619AD /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		D786BD1B2798285A004619AD /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */,
+				D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
-				D786BD1D2798286E004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
