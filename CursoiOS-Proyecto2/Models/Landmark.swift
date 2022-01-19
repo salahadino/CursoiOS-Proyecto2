@@ -40,4 +40,6 @@ struct Landmark: Codable {
     var toDetailViewModel: DetailViewModel {
         return DetailViewModel(name: name, image: image)
     }
+    
+    
 }

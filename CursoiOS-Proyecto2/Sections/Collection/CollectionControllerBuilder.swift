@@ -13,6 +13,7 @@ class CollectionControllerBuilder {
     func build() -> UIViewController {
         
         let viewController = CollectionViewController.createFromStoryboard()
+        viewController.fetchLandmarks = FetchLandmarksFromDisk()
         
         return viewController
     }

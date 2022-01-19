@@ -28,6 +28,7 @@
 		F511ABBB27988AF200057B60 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */; };
 		F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBC27988B0400057B60 /* CollectionViewController.swift */; };
 		F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */; };
+		F511ABC12798AEEA00057B60 /* CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABC02798AEEA00057B60 /* CellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
 		F511ABBC27988B0400057B60 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
+		F511ABC02798AEEA00057B60 /* CellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */,
 				F511ABBC27988B0400057B60 /* CollectionViewController.swift */,
 				F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */,
+				F511ABC02798AEEA00057B60 /* CellCollectionViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				F511ABA9279864D500057B60 /* ListViewController.swift in Sources */,
 				F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */,
 				F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */,
+				F511ABC12798AEEA00057B60 /* CellCollectionViewCell.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,

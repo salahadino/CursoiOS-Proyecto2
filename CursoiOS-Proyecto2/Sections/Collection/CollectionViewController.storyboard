@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,13 +16,70 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-Ir-06c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cfy-NR-oXe">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="ElN-lI-AsK" customClass="CellCollectionViewCell" customModule="CursoiOS_Proyecto2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V9H-yf-3YA">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-py-FvX">
+                                                    <rect key="frame" x="8" y="0.0" width="112" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="88" id="uX8-vF-cVR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-vI-Kh9">
+                                                    <rect key="frame" x="8" y="96" width="41.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fsc-py-FvX" firstAttribute="leading" secondItem="V9H-yf-3YA" secondAttribute="leading" constant="8" id="MLe-1o-fuY"/>
+                                                <constraint firstItem="R6q-vI-Kh9" firstAttribute="top" secondItem="fsc-py-FvX" secondAttribute="bottom" constant="8" symbolic="YES" id="MTj-1z-ceF"/>
+                                                <constraint firstItem="fsc-py-FvX" firstAttribute="leading" secondItem="R6q-vI-Kh9" secondAttribute="leading" id="Mxr-LF-LpL"/>
+                                                <constraint firstAttribute="trailing" secondItem="fsc-py-FvX" secondAttribute="trailing" constant="8" id="f7y-BQ-ijB"/>
+                                                <constraint firstItem="fsc-py-FvX" firstAttribute="top" secondItem="V9H-yf-3YA" secondAttribute="top" id="h6l-O9-LGn"/>
+                                                <constraint firstItem="R6q-vI-Kh9" firstAttribute="leading" secondItem="V9H-yf-3YA" secondAttribute="leading" constant="8" id="vtA-vS-Q38"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageCollection" destination="fsc-py-FvX" id="KTS-Ai-PvO"/>
+                                            <outlet property="labelCollection" destination="R6q-vI-Kh9" id="N5F-X7-1bx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sgV-Ir-06c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LzV-mq-inv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sgV-Ir-06c" secondAttribute="trailing" id="Va2-Ag-K6I"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sgV-Ir-06c" secondAttribute="bottom" id="tSD-L5-qIW"/>
+                            <constraint firstItem="sgV-Ir-06c" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wkd-eA-g0Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="sgV-Ir-06c" id="Tak-ff-7bD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="94"/>
+            <point key="canvasLocation" x="31.884057971014496" y="93.75"/>
         </scene>
     </scenes>
     <resources>

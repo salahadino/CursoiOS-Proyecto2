@@ -13,7 +13,7 @@ class ListViewController: UIViewController {
     
     var fetchLandmarks: FetchLandmarksUseCase?
     
-    var detailBuilder: DetailControllerBuilder?
+    //var detailBuilder: DetailControllerBuilder?
     
     static func createFromStoryboard() -> ListViewController {
         
