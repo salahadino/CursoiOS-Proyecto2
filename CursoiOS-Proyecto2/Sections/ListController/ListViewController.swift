@@ -13,6 +13,8 @@ class ListViewController: UIViewController {
     
     var fetchLandmarks: FetchLandmarksUseCase?
     
+    var detailBuilder: DetailControllerBuilder?
+    
     static func createFromStoryboard() -> ListViewController {
         
         return UIStoryboard(name: "ListViewController", bundle: .main).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
@@ -21,6 +23,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         fetchData()
         
 
@@ -65,7 +68,21 @@ extension ListViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension ListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let detailController = detailBuilder?.build() else {
+            return
+        }
+        
+        
+//        let detailController = DetailControllerBuilder().build()
+        
+        navigationController?.pushViewController(detailController, animated: true)
+    }
 }
 
 

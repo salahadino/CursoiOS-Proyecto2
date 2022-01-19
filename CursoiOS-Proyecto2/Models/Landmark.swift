@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum LandmarkCategory: String, Codable {
     case featured = "Featured"
@@ -30,4 +31,9 @@ struct Landmark: Codable {
     let isFeatured: Bool
     let isFavorite: Bool
     let imageName: String
+    
+    var image: UIImage? {
+        
+        UIImage(named: imageName)
+    }
 }
