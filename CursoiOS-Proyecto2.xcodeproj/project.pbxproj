@@ -25,6 +25,9 @@
 		F511ABB52798750300057B60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABB32798750300057B60 /* DetailViewController.swift */; };
 		F511ABB62798750300057B60 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F511ABB42798750300057B60 /* DetailViewController.xib */; };
 		F511ABB8279875F900057B60 /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABB7279875F900057B60 /* DetailControllerBuilder.swift */; };
+		F511ABBB27988AF200057B60 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */; };
+		F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBC27988B0400057B60 /* CollectionViewController.swift */; };
+		F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		F511ABB32798750300057B60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F511ABB42798750300057B60 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F511ABB7279875F900057B60 /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
+		F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
+		F511ABBC27988B0400057B60 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 		D786BD1B2798285A004619AD /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F511ABB927988ADA00057B60 /* Collection */,
 				F511ABAC2798747900057B60 /* Detail */,
 				F511ABA52798640E00057B60 /* ListController */,
 				D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */,
@@ -200,6 +207,16 @@
 				F511ABB7279875F900057B60 /* DetailControllerBuilder.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F511ABB927988ADA00057B60 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F511ABBA27988AF200057B60 /* CollectionViewController.storyboard */,
+				F511ABBC27988B0400057B60 /* CollectionViewController.swift */,
+				F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +326,7 @@
 				D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */,
 				D786BCF527982793004619AD /* Assets.xcassets in Resources */,
 				F511ABB62798750300057B60 /* DetailViewController.xib in Resources */,
+				F511ABBB27988AF200057B60 /* CollectionViewController.storyboard in Resources */,
 				D786BD2927982B7E004619AD /* landmarkData.json in Resources */,
 				F511ABA72798644800057B60 /* ListViewController.storyboard in Resources */,
 			);
@@ -339,6 +357,8 @@
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
 				F511ABAB279869F900057B60 /* ListControllerBuilder.swift in Sources */,
 				F511ABA9279864D500057B60 /* ListViewController.swift in Sources */,
+				F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */,
+				F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
