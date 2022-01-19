@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
-		D786BCF02798278F004619AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEF2798278F004619AD /* ViewController.swift */; };
 		D786BCF527982793004619AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF427982793004619AD /* Assets.xcassets */; };
 		D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF627982793004619AD /* LaunchScreen.storyboard */; };
 		D786BD0327982793004619AD /* CursoiOS_Proyecto2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0227982793004619AD /* CursoiOS_Proyecto2Tests.swift */; };
@@ -43,7 +42,6 @@
 		D786BCE82798278F004619AD /* CursoiOS-Proyecto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CursoiOS-Proyecto2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D786BCED2798278F004619AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D786BCEF2798278F004619AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D786BCF427982793004619AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D786BCF727982793004619AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D786BCF927982793004619AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,11 +110,10 @@
 				D786BD2227982A65004619AD /* Models */,
 				D786BCEB2798278F004619AD /* AppDelegate.swift */,
 				D786BCED2798278F004619AD /* SceneDelegate.swift */,
-				D786BCEF2798278F004619AD /* ViewController.swift */,
 				D786BCF427982793004619AD /* Assets.xcassets */,
 				D786BCF627982793004619AD /* LaunchScreen.storyboard */,
-				D786BD2727982B56004619AD /* Supporting files */,
 				D786BCF927982793004619AD /* Info.plist */,
+				D786BD2727982B56004619AD /* Supporting files */,
 			);
 			path = "CursoiOS-Proyecto2";
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D786BCF02798278F004619AD /* ViewController.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
 				D786BD1D2798286E004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
