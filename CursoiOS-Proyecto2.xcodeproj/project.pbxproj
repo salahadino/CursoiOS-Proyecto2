@@ -10,12 +10,16 @@
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
 		D786BCF02798278F004619AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEF2798278F004619AD /* ViewController.swift */; };
-		D786BCF32798278F004619AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF12798278F004619AD /* Main.storyboard */; };
 		D786BCF527982793004619AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF427982793004619AD /* Assets.xcassets */; };
 		D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF627982793004619AD /* LaunchScreen.storyboard */; };
 		D786BD0327982793004619AD /* CursoiOS_Proyecto2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0227982793004619AD /* CursoiOS_Proyecto2Tests.swift */; };
 		D786BD0D27982793004619AD /* CursoiOS_Proyecto2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0C27982793004619AD /* CursoiOS_Proyecto2UITests.swift */; };
 		D786BD0F27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD0E27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift */; };
+		D786BD1D2798286E004619AD /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */; };
+		D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */; };
+		D786BD2427982A72004619AD /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2327982A72004619AD /* Landmark.swift */; };
+		D786BD2627982AD6004619AD /* FetchLandmarksFromDiskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BD2527982AD6004619AD /* FetchLandmarksFromDiskTests.swift */; };
+		D786BD2927982B7E004619AD /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = D786BD2827982B7E004619AD /* landmarkData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,6 @@
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D786BCED2798278F004619AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D786BCEF2798278F004619AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D786BCF22798278F004619AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D786BCF427982793004619AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D786BCF727982793004619AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D786BCF927982793004619AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		D786BD0827982793004619AD /* CursoiOS-Proyecto2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CursoiOS-Proyecto2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BD0C27982793004619AD /* CursoiOS_Proyecto2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOS_Proyecto2UITests.swift; sourceTree = "<group>"; };
 		D786BD0E27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOS_Proyecto2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = SOURCE_ROOT; };
+		D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLandmarksUseCase.swift; sourceTree = "<group>"; };
+		D786BD2327982A72004619AD /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		D786BD2527982AD6004619AD /* FetchLandmarksFromDiskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLandmarksFromDiskTests.swift; sourceTree = "<group>"; };
+		D786BD2827982B7E004619AD /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,15 @@
 		D786BCEA2798278F004619AD /* CursoiOS-Proyecto2 */ = {
 			isa = PBXGroup;
 			children = (
+				D786BD1B2798285A004619AD /* Sections */,
+				D786BD1F27982A32004619AD /* UseCases */,
+				D786BD2227982A65004619AD /* Models */,
 				D786BCEB2798278F004619AD /* AppDelegate.swift */,
 				D786BCED2798278F004619AD /* SceneDelegate.swift */,
 				D786BCEF2798278F004619AD /* ViewController.swift */,
-				D786BCF12798278F004619AD /* Main.storyboard */,
 				D786BCF427982793004619AD /* Assets.xcassets */,
 				D786BCF627982793004619AD /* LaunchScreen.storyboard */,
+				D786BD2727982B56004619AD /* Supporting files */,
 				D786BCF927982793004619AD /* Info.plist */,
 			);
 			path = "CursoiOS-Proyecto2";
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D786BD0227982793004619AD /* CursoiOS_Proyecto2Tests.swift */,
+				D786BD2527982AD6004619AD /* FetchLandmarksFromDiskTests.swift */,
 			);
 			path = "CursoiOS-Proyecto2Tests";
 			sourceTree = "<group>";
@@ -125,6 +137,38 @@
 				D786BD0E27982793004619AD /* CursoiOS_Proyecto2UITestsLaunchTests.swift */,
 			);
 			path = "CursoiOS-Proyecto2UITests";
+			sourceTree = "<group>";
+		};
+		D786BD1B2798285A004619AD /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				D786BD1C2798286E004619AD /* InitialControllerBuilder.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		D786BD1F27982A32004619AD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		D786BD2227982A65004619AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D786BD2327982A72004619AD /* Landmark.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D786BD2727982B56004619AD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D786BD2827982B7E004619AD /* landmarkData.json */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +277,7 @@
 			files = (
 				D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */,
 				D786BCF527982793004619AD /* Assets.xcassets in Resources */,
-				D786BCF32798278F004619AD /* Main.storyboard in Resources */,
+				D786BD2927982B7E004619AD /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +304,10 @@
 			files = (
 				D786BCF02798278F004619AD /* ViewController.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
+				D786BD1D2798286E004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
+				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
+				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D786BD0327982793004619AD /* CursoiOS_Proyecto2Tests.swift in Sources */,
+				D786BD2627982AD6004619AD /* FetchLandmarksFromDiskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D786BCF12798278F004619AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D786BCF22798278F004619AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D786BCF627982793004619AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +484,6 @@
 				INFOPLIST_FILE = "CursoiOS-Proyecto2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +511,6 @@
 				INFOPLIST_FILE = "CursoiOS-Proyecto2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
