@@ -13,7 +13,13 @@ class InitialControllerBuilder {
         let viewController = ListControllerBuilder().build()
 //        viewController.view.backgroundColor = .red
         let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "List", image: UIImage.init(systemName: "list.bullet"), tag: 0)
         
-        return navigationController
+        
+        
+        let tabBarcontroller = UITabBarController()
+        tabBarcontroller.setViewControllers([navigationController], animated: false)
+        
+        return tabBarcontroller
     }
 }

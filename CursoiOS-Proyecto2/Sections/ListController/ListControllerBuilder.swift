@@ -18,6 +18,8 @@ class ListControllerBuilder {
         //viewController.detailBuilder = DetailControllerBuilder()
         
         viewController.fetchLandmarks = FetchLandmarksFromDisk()
+        
+       
         return viewController
     }
     
