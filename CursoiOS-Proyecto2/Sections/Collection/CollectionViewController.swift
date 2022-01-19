@@ -21,6 +21,7 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         collectionView.setCollectionViewLayout(layout, animated: false)
         
@@ -87,4 +88,17 @@ extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return landmarks.count
     }
+}
+
+extension CollectionViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let landmark = landmarks[indexPath.row]
+        
+        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
+        
+        navigationController?.pushViewController(detailController, animated: true)
+        
+    }
+    
 }
