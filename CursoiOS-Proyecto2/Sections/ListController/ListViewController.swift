@@ -74,12 +74,13 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let detailController = detailBuilder?.build() else {
-            return
-        }
+//        guard let detailController = detailBuilder?.build() else {
+//            return
+//        }
+        let landmark = landmarks[indexPath.row]
         
         
-//        let detailController = DetailControllerBuilder().build()
+        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
         
         navigationController?.pushViewController(detailController, animated: true)
     }

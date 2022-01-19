@@ -36,4 +36,8 @@ struct Landmark: Codable {
         
         UIImage(named: imageName)
     }
+    
+    var toDetailViewModel: DetailViewModel {
+        return DetailViewModel(name: name, image: image)
+    }
 }

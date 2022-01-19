@@ -15,7 +15,7 @@ class ListControllerBuilder {
         
         let viewController = ListViewController.createFromStoryboard()
         
-        viewController.detailBuilder = DetailControllerBuilder()
+        //viewController.detailBuilder = DetailControllerBuilder()
         
         viewController.fetchLandmarks = FetchLandmarksFromDisk()
         return viewController
