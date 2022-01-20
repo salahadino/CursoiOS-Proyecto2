@@ -11,6 +11,8 @@ class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var fetchCats: FetchCatsUseCase?
+    
     var fetchLandmarks: FetchLandmarksUseCase?
     
     //var detailBuilder: DetailControllerBuilder?
@@ -29,23 +31,33 @@ class ListViewController: UIViewController {
 
     }
     
-    private var landmarks = [Landmark]() {
+    private var cats = [Cat]() {
         
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
         }
     }
     
+//    private func fetchData() {
+//
+//        fetchLandmarks?.fetchLandmarks( { result in
+//            switch result {
+//            case .success(let landmarks): self.landmarks = landmarks
+//
+//
+//            case .failure: break
+//
+//            }
+//        })
+//    }
+    
     private func fetchData() {
         
-        fetchLandmarks?.fetchLandmarks( { result in
-            switch result {
-            case .success(let landmarks): self.landmarks = landmarks
-               
-                
-            case .failure: break
-                
-            }
+        fetchCats?.fetchCats(completion: { cats in
+            self.cats = cats
         })
     }
     
@@ -54,13 +66,15 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return landmarks.count
+        return cats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
-        let landmark = landmarks[indexPath.row]
-        cell.textLabel?.text = landmark.name
+        let cat = cats[indexPath.row]
+        
+        
+        cell.textLabel?.text = cat.tagsText
         
         
         return cell
@@ -77,12 +91,14 @@ extension ListViewController: UITableViewDelegate {
 //        guard let detailController = detailBuilder?.build() else {
 //            return
 //        }
-        let landmark = landmarks[indexPath.row]
         
         
-        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
-        
-        navigationController?.pushViewController(detailController, animated: true)
+//        let landmark = landmarks[indexPath.row]
+//
+//
+//        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
+//
+//        navigationController?.pushViewController(detailController, animated: true)
     }
 }
 

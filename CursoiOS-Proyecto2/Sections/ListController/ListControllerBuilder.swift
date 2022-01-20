@@ -17,7 +17,9 @@ class ListControllerBuilder {
         
         //viewController.detailBuilder = DetailControllerBuilder()
         
-        viewController.fetchLandmarks = FetchLandmarksFromDisk()
+        //viewController.fetchLandmarks = FetchLandmarksFromDisk()
+        
+        viewController.fetchCats = FetchCatsFromAPI()
         
        
         return viewController

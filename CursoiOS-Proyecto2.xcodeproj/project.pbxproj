@@ -29,6 +29,8 @@
 		F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBC27988B0400057B60 /* CollectionViewController.swift */; };
 		F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */; };
 		F511ABC12798AEEA00057B60 /* CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511ABC02798AEEA00057B60 /* CellCollectionViewCell.swift */; };
+		F58446532799B33300C599F2 /* FetchCatsUeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58446522799B33300C599F2 /* FetchCatsUeCase.swift */; };
+		F58446552799B47400C599F2 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58446542799B47400C599F2 /* Cat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		F511ABBC27988B0400057B60 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F511ABBE27988B8E00057B60 /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
 		F511ABC02798AEEA00057B60 /* CellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCollectionViewCell.swift; sourceTree = "<group>"; };
+		F58446522799B33300C599F2 /* FetchCatsUeCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCatsUeCase.swift; sourceTree = "<group>"; };
+		F58446542799B47400C599F2 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D786BD2027982A45004619AD /* FetchLandmarksUseCase.swift */,
+				F58446522799B33300C599F2 /* FetchCatsUeCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				D786BD2327982A72004619AD /* Landmark.swift */,
+				F58446542799B47400C599F2 /* Cat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58446532799B33300C599F2 /* FetchCatsUeCase.swift in Sources */,
 				D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
 				F511ABAB279869F900057B60 /* ListControllerBuilder.swift in Sources */,
@@ -363,6 +370,7 @@
 				F511ABBD27988B0400057B60 /* CollectionViewController.swift in Sources */,
 				F511ABBF27988B8E00057B60 /* CollectionControllerBuilder.swift in Sources */,
 				F511ABC12798AEEA00057B60 /* CellCollectionViewCell.swift in Sources */,
+				F58446552799B47400C599F2 /* Cat.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,

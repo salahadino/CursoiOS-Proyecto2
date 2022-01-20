@@ -16,9 +16,9 @@ class CellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelCollection: UILabel!
     @IBOutlet weak var imageCollection: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//    }
     
     func configure(with viewModel: CollectionCellViewModel){
         
