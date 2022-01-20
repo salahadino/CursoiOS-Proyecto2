@@ -29,4 +29,9 @@ extension Cat {
         
         ListTableCellViewModel(imageUrl: imageUrl, text: tagsText)
     }
+    
+    var toDetailViewModel: DetailViewModel {
+        
+        return DetailViewModel.init(name: tagsText, imageUrl: imageUrl)
+    }
 }

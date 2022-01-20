@@ -117,6 +117,11 @@ extension ListViewController: UITableViewDelegate {
 //        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
 //
 //        navigationController?.pushViewController(detailController, animated: true)
+        
+        let cat = cats[indexPath.row]
+        let detailController = DetailControllerBuilder().build(viewModel: cat.toDetailViewModel)
+        
+        navigationController?.pushViewController(detailController, animated: true)
     }
 }
 

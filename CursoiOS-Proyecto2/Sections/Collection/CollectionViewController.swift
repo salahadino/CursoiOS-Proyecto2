@@ -95,9 +95,9 @@ extension CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let landmark = landmarks[indexPath.row]
         
-        let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
+        //let detailController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
         
-        navigationController?.pushViewController(detailController, animated: true)
+        //navigationController?.pushViewController(detailController, animated: true)
         
     }
     
