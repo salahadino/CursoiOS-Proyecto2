@@ -24,4 +24,9 @@ extension Cat {
     var imageUrl: URL? {
         return URL(string: "https://cataas.com/cat/\(id)")
     }
+    
+    var toListCellViewModel: ListTableCellViewModel {
+        
+        ListTableCellViewModel(imageUrl: imageUrl, text: tagsText)
+    }
 }

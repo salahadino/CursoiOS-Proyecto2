@@ -74,9 +74,13 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListTableViewCell
         let cat = cats[indexPath.row]
         
+        cell.configure(viewModel: ListTableCellViewModel(imageUrl: cat.imageUrl, text: cat.tagsText))
         
-        cell.textLabel?.text = cat.tagsText
-        cell.imageView?.kf.setImage(with: cat.imageUrl)
+        
+        
+        
+//        cell.textLabel?.text = cat.tagsText
+//        cell.imageView?.kf.setImage(with: cat.imageUrl)
         
 //        if let url = cat.imageUrl, let data =  try? Data(contentsOf: url){
 //
