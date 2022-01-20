@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListViewController: UIViewController {
     
@@ -70,11 +71,19 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListTableViewCell
         let cat = cats[indexPath.row]
         
         
         cell.textLabel?.text = cat.tagsText
+        cell.imageView?.kf.setImage(with: cat.imageUrl)
+        
+//        if let url = cat.imageUrl, let data =  try? Data(contentsOf: url){
+//
+//            cell.imageView?.image = UIImage(data: data)
+//        }
+        
+        
         
         
         return cell

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 protocol FetchCatsUseCase {
     
@@ -20,26 +21,39 @@ class FetchCatsFromAPI: FetchCatsUseCase {
             completion([])
             return
         }
+        
+        
         let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
+        
+        AF.request(request).responseDecodable { (response: DataResponse<[Cat], AFError>) in
+            switch response.result {
                 
-                completion([])
-                
-                return
+            case .success(let cats): completion(cats)
+            case .failure: completion([])
             }
-            
-            do {
-                
-                let cats = try JSONDecoder().decode([Cat].self, from: data)
-                completion(cats)
-            }catch {
-                
-                completion([])
-            }
-            
-            
-        }.resume()
-    }
+        }.validate()
+        
+        
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data else {
+//
+//                completion([])
+//
+//                return
+//            }
+//
+//            do {
+//
+//                let cats = try JSONDecoder().decode([Cat].self, from: data)
+//                completion(cats)
+//            }catch {
+//
+//                completion([])
+//            }
+//
+//
+//        }.resume()
+   }
  
 }
+
