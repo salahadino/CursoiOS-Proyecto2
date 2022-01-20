@@ -42,6 +42,8 @@ class ListViewController: UIViewController {
         }
     }
     
+    private var favorites = [String]()
+    
 //    private func fetchData() {
 //
 //        fetchLandmarks?.fetchLandmarks( { result in
@@ -75,6 +77,9 @@ extension ListViewController: UITableViewDataSource {
         let cat = cats[indexPath.row]
         
         cell.configure(viewModel: ListTableCellViewModel(imageUrl: cat.imageUrl, text: cat.tagsText))
+        
+        cell.delegate = self
+        cell.isFavorite = favorites.contains(cat.id)
         
         
         
@@ -115,4 +120,25 @@ extension ListViewController: UITableViewDelegate {
     }
 }
 
+extension ListViewController: ListTableViewDelegate {
+    func didPressInFavorite(cell: ListTableViewCell) {
+        print("favoritepressed")
+        
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        
+        cell.isFavorite = !cell.isFavorite
+        
+        let cat = cats[indexPath.row]
+        
+        if cell.isFavorite {
+            favorites.append(cat.id)
+        }else if let index = favorites.firstIndex(of: cat.id){
+            
+            favorites.remove(at: index)
+        }
+    }
+    
+    
+    
+}
 

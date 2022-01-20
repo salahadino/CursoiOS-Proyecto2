@@ -14,6 +14,11 @@ struct ListTableCellViewModel {
     let text: String
 }
 
+protocol ListTableViewDelegate: AnyObject {
+    
+    func didPressInFavorite(cell: ListTableViewCell)
+}
+
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var favoriteButton: UIButton!
@@ -23,6 +28,24 @@ class ListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    weak var delegate: ListTableViewDelegate?
+    
+    var isFavorite = false {
+        
+        didSet {
+            
+            if isFavorite {
+                favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            }else{
+                favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            }
+        }
+    }
+    
+    override func prepareForReuse() {
+        isFavorite = false
     }
 
     func configure(viewModel: ListTableCellViewModel) {
@@ -35,6 +58,6 @@ class ListTableViewCell: UITableViewCell {
 
     @IBAction func favoritePressed(_ sender: Any) {
         
-        
+        delegate?.didPressInFavorite(cell: self)
     }
 }
